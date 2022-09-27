@@ -1,8 +1,21 @@
 let currentProducts = products
 let categories = new Set()
 let basket = []
+let addToBasketButtons
 
 const productsSection = document.querySelector('.products')
+
+const addToBasket = e => {
+	const selectedId = parseInt(e.target.dataset.id)
+
+	const key = currentProducts.findIndex(product => selectedId === product.id)
+
+	basket.push(currentProducts.at(key))
+
+	const basketTotal = basket.reduce((acc, ce) => acc + ce.price, 0)
+	basketAmountSpan.textContent = `${basketTotal.toFixed(2)} zł`
+}
+
 const renderProducts = items => {
 	productsSection.innerHTML = ''
 	for (let i = 0; i < items.length; i++) {
@@ -24,6 +37,8 @@ const renderProducts = items => {
 
 		productsSection.appendChild(newProduct)
 	}
+	addToBasketButtons = document.querySelectorAll('.product-add-to-basket-btn')
+	addToBasketButtons.forEach(btn => btn.addEventListener('click', addToBasket))
 }
 
 const renderCategories = items => {
@@ -83,20 +98,8 @@ searchBarInput.addEventListener('input', e => {
 	renderProducts(foundProducts)
 })
 
-const addToBasketButtons = document.querySelectorAll('.product-add-to-basket-btn')
 const basketClearBtn = document.querySelector('.clear-basket')
 const basketAmountSpan = document.querySelector('.cart-value')
-
-const addToBasket = e => {
-	const selectedId = parseInt(e.target.dataset.id)
-
-	const key = currentProducts.findIndex(product => selectedId === product.id)
-
-	basket.push(currentProducts.at(key))
-
-	const basketTotal = basket.reduce((acc, ce) => acc + ce.price, 0)
-	basketAmountSpan.textContent = `${basketTotal.toFixed(2)} zł`
-}
 
 const clearBasket = () => {
 	basketAmountSpan.innerHTML = 0
@@ -104,5 +107,3 @@ const clearBasket = () => {
 }
 
 basketClearBtn.addEventListener('click', clearBasket)
-
-addToBasketButtons.forEach(btn => btn.addEventListener('click', addToBasket))
