@@ -1,10 +1,12 @@
 let currentProducts = products
 let categories = new Set()
+let basket = []
 
 const productsSection = document.querySelector('.products')
 const renderProducts = items => {
 	productsSection.innerHTML = ''
 	for (let i = 0; i < items.length; i++) {
+		let priceAfterSale = items[i].price - items[i].saleAmount
 		const newProduct = document.createElement('div')
 		newProduct.className = `product-item ${items[i].sale ? 'onSale' : ''}`
 		newProduct.innerHTML = `
@@ -13,9 +15,11 @@ const renderProducts = items => {
         <p class="product-description">${items[i].description}</p>
         <div class="product-price">
             <span class="price">${items[i].price.toFixed(2)}zł</span>
-            <span class="price-sale">${(items[i].price - items[i].saleAmount).toFixed(2)}zł</span>
+            <span class="price-sale">${priceAfterSale.toFixed(2)}zł</span>
         </div>
-        <button class=""><i class="fa-solid fa-cart-shopping"></i> Dodaj do koszyka</button>
+        <button data-id="${
+					items[i].id
+				}" class="product-add-to-basket-btn"><i class="fa-solid fa-cart-shopping"></i> Dodaj do koszyka</button>
         <p class="product-item-sale-info">Promocja</p>`
 
 		productsSection.appendChild(newProduct)
@@ -78,3 +82,27 @@ searchBarInput.addEventListener('input', e => {
 
 	renderProducts(foundProducts)
 })
+
+const addToBasketButtons = document.querySelectorAll('.product-add-to-basket-btn')
+const basketClearBtn = document.querySelector('.clear-basket')
+const basketAmountSpan = document.querySelector('.cart-value')
+
+const addToBasket = e => {
+	const selectedId = parseInt(e.target.dataset.id)
+
+	const key = currentProducts.findIndex(product => selectedId === product.id)
+
+	basket.push(currentProducts.at(key))
+
+	const basketTotal = basket.reduce((acc, ce) => acc + ce.price, 0)
+	basketAmountSpan.textContent = `${basketTotal.toFixed(2)} zł`
+}
+
+const clearBasket = () => {
+	basketAmountSpan.innerHTML = 0
+	basket = []
+}
+
+basketClearBtn.addEventListener('click', clearBasket)
+
+addToBasketButtons.forEach(btn => btn.addEventListener('click', addToBasket))
