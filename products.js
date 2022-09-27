@@ -1,7 +1,7 @@
 const products = [
 	{
 		id: 1,
-		type: 'phone',
+		category: 'Telefony',
 		name: 'Xiaomi Redmi Note 10S 6/128GB Onyx Gray',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 1099.0,
@@ -11,7 +11,7 @@ const products = [
 	},
 	{
 		id: 2,
-		type: 'phone',
+		category: 'Telefony',
 		name: 'Samsung Galaxy A53 5G 6/128GB 120Hz Black',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 2099.0,
@@ -21,7 +21,7 @@ const products = [
 	},
 	{
 		id: 3,
-		type: 'phone',
+		category: 'Telefony',
 		name: 'Samsung Galaxy A32 SM-A325F 4/128GB Black',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 1299.0,
@@ -31,7 +31,7 @@ const products = [
 	},
 	{
 		id: 4,
-		type: 'phone',
+		category: 'Telefony',
 		name: 'Apple iPhone 13 128GB Starlight',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 4499.0,
@@ -40,7 +40,7 @@ const products = [
 	},
 	{
 		id: 5,
-		type: 'phone',
+		category: 'Telefony',
 		name: 'ASUS ZenFone 8 8/128GB Black',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 2999.0,
@@ -50,7 +50,7 @@ const products = [
 	},
 	{
 		id: 6,
-		type: 'phone',
+		category: 'Telefony',
 		name: 'Apple iPhone 11 64GB Black',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 2599.0,
@@ -59,7 +59,7 @@ const products = [
 	},
 	{
 		id: 7,
-		type: 'phone',
+		category: 'Telefony',
 		name: 'Motorola Edge 20 Lite 5G 8/128GB Electric Graphite 90Hz',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 1699.0,
@@ -68,7 +68,7 @@ const products = [
 	},
 	{
 		id: 8,
-		type: 'phone',
+		category: 'Telefony',
 		name: 'realme 9 Pro+ 6+128GB Aurora Green OIS 60W',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 1649.0,
@@ -78,7 +78,7 @@ const products = [
 	},
 	{
 		id: 9,
-		type: 'phone',
+		category: 'Telefony',
 		name: 'Samsung Galaxy S22 Ultra 12/512GB Green',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 6499.0,
@@ -87,7 +87,7 @@ const products = [
 	},
 	{
 		id: 10,
-		type: 'phone',
+		category: 'Telefony',
 		name: 'Apple iPhone 14 Pro Max 1TB Deep Purple',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 10499.0,
@@ -96,7 +96,7 @@ const products = [
 	},
 	{
 		id: 11,
-		type: 'laptop',
+		category: 'Laptopy',
 		name: 'Acer Nitro 5 i5-11400H/16GB/512 RTX3050Ti 144Hz',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 4199.0,
@@ -105,7 +105,7 @@ const products = [
 	},
 	{
 		id: 12,
-		type: 'laptop',
+		category: 'Laptopy',
 		name: 'Apple MacBook Air M1/16GB/256/Mac OS Space Gray US',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 6499.0,
@@ -114,7 +114,7 @@ const products = [
 	},
 	{
 		id: 13,
-		type: 'laptop',
+		category: 'Laptopy',
 		name: 'Dell Inspiron G15 5511 i5-11260H/16GB/512/Win11 RTX3050',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 4199.0,
@@ -124,7 +124,7 @@ const products = [
 	},
 	{
 		id: 14,
-		type: 'laptop',
+		category: 'Laptopy',
 		name: 'Gigabyte G5 GD i5-11400H/16GB/512 RTX3050 144Hz',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 4349.0,
@@ -134,7 +134,7 @@ const products = [
 	},
 	{
 		id: 15,
-		type: 'laptop',
+		category: 'Laptopy',
 		name: 'Gigabyte G5 GD i5-11400H/16GB/512 RTX3050 144Hz',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 5999.0,
@@ -143,7 +143,7 @@ const products = [
 	},
 	{
 		id: 16,
-		type: 'laptop',
+		category: 'Laptopy',
 		name: 'Apple MacBook Air M1/8GB/256/Mac OS Space Gray',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 5399.0,
@@ -152,7 +152,7 @@ const products = [
 	},
 	{
 		id: 17,
-		type: 'laptop',
+		category: 'Laptopy',
 		name: 'Razer Blade 15 i7/32GB/1TB/Win11 RTX3070Ti 360Hz',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 16399.0,
@@ -161,7 +161,7 @@ const products = [
 	},
 	{
 		id: 18,
-		type: 'tv',
+		category: 'Telewizory',
 		name: 'Philips 70PUS7956',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 3299.0,
@@ -171,7 +171,7 @@ const products = [
 	},
 	{
 		id: 19,
-		type: 'tv',
+		category: 'Telewizory',
 		name: 'Philips 70PUS8546',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 4499.0,
@@ -180,7 +180,7 @@ const products = [
 	},
 	{
 		id: 20,
-		type: 'tv',
+		category: 'Telewizory',
 		name: 'Xiaomi Mi TV Q1 75"',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 6199.0,
@@ -189,7 +189,7 @@ const products = [
 	},
 	{
 		id: 21,
-		type: 'tv',
+		category: 'Telewizory',
 		name: 'Samsung QE75Q67BA',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 6499.0,
@@ -198,7 +198,7 @@ const products = [
 	},
 	{
 		id: 22,
-		type: 'pc',
+		category: 'Komputery',
 		name: 'G4M3R HERO i5-12400F/16GB/1TB/RTX3060/W11x',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 6550.0,
@@ -207,7 +207,7 @@ const products = [
 	},
 	{
 		id: 22,
-		type: 'pc',
+		category: 'Komputery',
 		name: 'Acer Nitro 50 i5-11400F/16GB/512 RTX3060Ti',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 5249.0,
@@ -216,7 +216,7 @@ const products = [
 	},
 	{
 		id: 23,
-		type: 'pc',
+		category: 'Komputery',
 		name: 'ASUS ROG Strix G10CE i5-11400F/16GB/512/Win11 RTX3060',
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 5399.0,
