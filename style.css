@@ -8,15 +8,28 @@
 body {
 	background-color: #ebebeb;
 	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
 }
 header {
 	position: sticky;
 	top: 0;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	padding: 20px 40px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 	background-color: rgb(255, 255, 255);
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+@media (max-width: 1000px) {
+	header {
+		justify-content: center;
+		align-items: center;
+	}
+	.search-bar {
+		min-width: 300px;
+	}
 }
 .header-title {
 	font-size: 30px;
@@ -28,19 +41,18 @@ header {
 	color: #0073ff;
 }
 .search-bar {
-	margin-left: 15%;
 	display: flex;
 	position: relative;
-	flex-grow: 1;
+	width: 50%;
 }
 .search-bar-input {
 	background-color: rgba(0, 0, 0, 0.1);
 	border: none;
-	min-width: 50%;
 	font-size: 12px;
 	padding: 10px 30px;
 	border-radius: 50px;
 	outline: none;
+	width: 100%;
 }
 .search-bar-input::placeholder {
 	font-family: 'Montserrat', sans-serif;
@@ -60,6 +72,7 @@ header {
 	color: #0073ff;
 }
 .categories {
+	transition: all 0.3s;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -76,8 +89,11 @@ header {
 .categories-items {
 	display: flex;
 	gap: 1.5rem;
+	flex-wrap: wrap;
+	justify-content: center;
 }
-.categories-items button {
+.categories-items button,
+.product-item button {
 	padding: 7px;
 	border: none;
 	font-family: 'Montserrat', sans-serif;
@@ -85,8 +101,17 @@ header {
 	cursor: pointer;
 	transition: all 0.5s ease;
 }
-.categories-items button:hover {
+.categories-items button:hover,
+.product-item button {
 	background-color: #00bfff;
+}
+.product-item button {
+	font-size: 15px;
+	font-weight: 500;
+	color: #fff;
+}
+.product-item button:hover {
+	background-color: #00ffd0;
 }
 .categories-items button.active {
 	background-color: #00bfff;
@@ -101,19 +126,20 @@ header {
 	gap: 20px;
 }
 .product-item {
-	padding: 10px;
+	background-color: #fff;
+	position: relative;
+	padding: 20px 10px;
 	max-width: 325px;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
 	overflow: hidden;
 	border-radius: 4px;
-	transition: all 0.5s ease;
+	transition: all 0.3s ease-in-out;
 	text-align: center;
 	min-height: 500px;
-}
-.product-item:hover {
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	cursor: pointer;
 }
 .product-name {
 	font-size: 20px;
@@ -122,11 +148,60 @@ header {
 .product-description {
 	margin: 15px 10px;
 	font-size: 14px;
+	line-height: 13px;
 }
 .product-price {
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+	font-weight: 700;
+	font-size: 20px;
+	color: #0073ff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+.product-price .price-sale {
+	display: none;
+}
+.product-item.onSale .price {
+	font-size: 15px;
+	color: rgb(61, 61, 61);
+	text-decoration: line-through;
+}
+.product-item.onSale .price-sale {
+	display: block;
+}
+.product-item-sale-info {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 10px;
+	padding: 5px;
+	font-size: 15px;
+	background-color: #000000c9;
+	color: #ffd700;
+	font-weight: 700;
+	letter-spacing: 1px;
+	border-radius: 4px;
+}
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+	background-color: #000;
+	color: #fff;
+	position: relative;
+}
+footer ul {
+	display: flex;
+	gap: 20px;
+}
+footer li:hover {
+	cursor: pointer;
+	color: orangered;
+}
+footer span {
+	font-size: 12px;
+	color: gray;
 }
