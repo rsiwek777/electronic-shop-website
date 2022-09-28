@@ -36,6 +36,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 4499.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/phone4.png',
 	},
 	{
@@ -55,6 +56,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 2599.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/phone6.png',
 	},
 	{
@@ -64,6 +66,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 1699.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/phone7.png',
 	},
 	{
@@ -83,6 +86,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 6499.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/phone9.png',
 	},
 	{
@@ -92,6 +96,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 10499.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/phone10.png',
 	},
 	{
@@ -101,6 +106,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 4199.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/laptop1.png',
 	},
 	{
@@ -110,6 +116,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 6499.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/laptop2.png',
 	},
 	{
@@ -139,6 +146,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 5999.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/laptop5.png',
 	},
 	{
@@ -148,6 +156,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 5399.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/laptop6.png',
 	},
 	{
@@ -157,6 +166,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 16399.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/laptop7.png',
 	},
 	{
@@ -176,6 +186,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 4499.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/tv2.png',
 	},
 	{
@@ -185,6 +196,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 6199.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/tv3.png',
 	},
 	{
@@ -194,6 +206,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 6499.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/tv4.png',
 	},
 	{
@@ -203,6 +216,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 6550.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/pc1.png',
 	},
 	{
@@ -212,6 +226,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 5249.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/pc2.png',
 	},
 	{
@@ -241,6 +256,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 215.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/klaw2.png',
 	},
 	{
@@ -250,6 +266,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 249.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/klaw3.png',
 	},
 	{
@@ -259,6 +276,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 279.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/klaw4.png',
 	},
 	{
@@ -268,6 +286,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 249.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/klaw5.png',
 	},
 	{
@@ -297,6 +316,7 @@ const products = [
 		description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita quisquam repellendus cumque voluptates!`,
 		price: 1499.0,
 		sale: false,
+		saleAmount: 0,
 		image: './images/card3.png',
 	},
 	{

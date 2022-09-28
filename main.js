@@ -12,7 +12,7 @@ const addToBasket = e => {
 
 	basket.push(currentProducts.at(key))
 
-	const basketTotal = basket.reduce((acc, ce) => acc + ce.price, 0)
+	const basketTotal = basket.reduce((acc, ce) => acc + (ce.price - ce.saleAmount), 0)
 	basketAmountSpan.textContent = `${basketTotal.toFixed(2)} zł`
 }
 
@@ -36,6 +36,8 @@ const renderProducts = items => {
         <p class="product-item-sale-info">Promocja</p>`
 
 		productsSection.appendChild(newProduct)
+		console.log(items[i].price, items[i].saleAmount)
+		console.log(priceAfterSale)
 	}
 	addToBasketButtons = document.querySelectorAll('.product-add-to-basket-btn')
 	addToBasketButtons.forEach(btn => btn.addEventListener('click', addToBasket))

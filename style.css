@@ -103,6 +103,7 @@ header {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .categories-title {
+	line-height: 50px;
 	margin: 5px 0;
 	font-size: 14px;
 	color: rgba(0, 0, 0, 0.7);
