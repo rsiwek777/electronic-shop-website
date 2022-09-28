@@ -102,6 +102,9 @@ header {
 	padding: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+.container {
+	min-height: calc(100vh - 76px - 79px);
+}
 .categories-title {
 	line-height: 50px;
 	margin: 5px 0;
@@ -162,6 +165,10 @@ header {
 	min-height: 550px;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	cursor: pointer;
+
+	transition: all 0.2s;
+	opacity: 0;
+	transform: translateY(-30px);
 }
 .product-item:hover {
 	border: 1px solid black;

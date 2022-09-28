@@ -38,6 +38,11 @@ const renderProducts = items => {
 		productsSection.appendChild(newProduct)
 		console.log(items[i].price, items[i].saleAmount)
 		console.log(priceAfterSale)
+
+		setTimeout(() => {
+			newProduct.style.opacity = '1'
+			newProduct.style.transform = 'translateY(0)'
+		}, i * 100 + 100)
 	}
 	addToBasketButtons = document.querySelectorAll('.product-add-to-basket-btn')
 	addToBasketButtons.forEach(btn => btn.addEventListener('click', addToBasket))
